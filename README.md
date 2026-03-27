@@ -1,3 +1,4 @@
+
 # MiniProject2-Pemrograman-Berbasis-Web-Portofolio
 
 Project ini merupakan website portofolio yang dibuat menggunakan HTML, CSS, Bootstrap 5, Vue JS, dan PHP dengan koneksi database MySQL. Website ini menampilkan informasi pribadi, pengalaman, skill, sertifikat, dan media sosial secara interaktif dan responsif.
@@ -5,11 +6,15 @@ Project ini merupakan website portofolio yang dibuat menggunakan HTML, CSS, Boot
 ---
 
 ## 💻 Tampilan Website
+<img width="1916" height="991" alt="Screenshot 2026-03-27 135638" src="https://github.com/user-attachments/assets/e8e28042-52a9-49fa-9138-1d95c8555235" />
 
-![Hero Section](https://github.com/user-attachments/assets/8ef87a3f-1b9d-44c2-943f-5313d304bab0)
-![About Section](https://github.com/user-attachments/assets/5ae96c94-4f31-41b8-9128-2232d6a8ef47)
-![Certificates Section](https://github.com/user-attachments/assets/72bd1bfb-4d8f-49dd-97ec-ae7f491c0019)
-![Contact Section](https://github.com/user-attachments/assets/43713f1b-507e-488a-9e64-a4d9147ded83)
+<img width="1918" height="994" alt="Screenshot 2026-03-27 135643" src="https://github.com/user-attachments/assets/0e606daf-5085-4a16-9588-343bb0c73577" />
+
+<img width="1919" height="981" alt="Screenshot 2026-03-27 135649" src="https://github.com/user-attachments/assets/f0622e7a-0c83-4cff-890b-27e5f07d4a3d" />
+
+
+<img width="1919" height="986" alt="Screenshot 2026-03-27 135653" src="https://github.com/user-attachments/assets/2855de81-a17f-4316-9b76-3d85f79cab53" />
+
 
 ---
 
