@@ -1,0 +1,682 @@
+/* ================================================================
+   STYLE.CSS — Portfolio Nayla Camelia
+   Catatan refactor:
+   - Layout responsif (breakpoints) kini ditangani Bootstrap grid
+   - Custom media queries HANYA untuk hal yang tidak bisa Bootstrap
+   - Visual/warna/font/animasi TIDAK DIUBAH sama sekali
+   ================================================================ */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #faf8f5;
+  color: #1a1a1a;
+  font-weight: 400;
+  line-height: 1.65;
+}
+
+section {
+  padding-top: 96px;
+  padding-bottom: 96px;
+}
+
+/* ================================================================
+   NAVBAR — Visual styling saja, layout Bootstrap yang handle
+   ================================================================ */
+.navbar {
+  background-color: rgba(254, 254, 253, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid #ece8e1;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.navbar-brand {
+  font-size: 18px;
+  color: #1a1919d1;
+  font-weight: 600;
+  transition: color 0.25s ease;
+}
+
+.navbar-brand:hover {
+  color: #e8718a;
+}
+
+.navbar-nav .nav-link {
+  font-size: 15px;
+  font-weight: 500;
+  color: #888888;
+  letter-spacing: 0.05em;
+  padding-left: 14px;
+  padding-right: 14px;
+  transition: color 0.25s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #1a1919;
+}
+
+/* Override Bootstrap navbar-toggler border agar sesuai tema */
+.navbar-toggler {
+  border-color: #ece8e1;
+}
+
+.navbar-toggler:focus {
+  box-shadow: 0 0 0 0.15rem rgba(232, 113, 138, 0.25);
+}
+
+/* ================================================================
+   HERO SECTION — min-height dan background; layout pakai Bootstrap row
+   ================================================================ */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-color: #faf8f5;
+  padding-top: 80px;
+  padding-bottom: 60px;
+}
+
+.hero-greeting {
+  font-size: 14px;
+  font-weight: 600;
+  color: #e8718a;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 70px;
+  font-weight: 1000;
+  line-height: 1.05;
+  color: #1a1919d1;
+}
+
+.lead {
+  font-size: 18px;
+  color: #666666;
+  font-weight: 600;
+  margin-top: 10px;
+  line-height: 1.75;
+}
+
+.desc-text {
+  font-size: 18px;
+  color: #777777;
+  line-height: 1.85;
+  font-weight: 300;
+  margin-top: 0px;
+  text-align: justify;
+}
+
+/* Tombol Hero — styling visual saja, Bootstrap d-flex/gap yang atur layout */
+.explore-btn {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #e8718a;
+  border: 1.5px solid #e8718a;
+  padding: 12px 28px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.explore-btn:hover {
+  background-color: #d45f77;
+  border-color: #d45f77;
+  color: #ffffff;
+}
+
+.contact-btn {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #e8718a;
+  background-color: transparent;
+  border: 1.5px solid #e8c5cb;
+  padding: 12px 28px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.contact-btn:hover {
+  background-color: #fff0f2;
+  border-color: #e8718a;
+}
+
+/* Profile Image */
+.profile-layout {
+  position: relative;
+  display: inline-block;
+}
+
+.profile-box {
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid #ece8e1;
+  background-color: #f0ebe3;
+  box-shadow: 0 8px 20px rgba(26, 26, 26, 0.08);
+}
+
+.profile-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Float Badge */
+.float-badge {
+  position: absolute;
+  background-color: #ffffff;
+  border: 1px solid #ece8e1;
+  border-radius: 30px;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #444444;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.07);
+  white-space: nowrap;
+}
+
+.float-badge i {
+  color: #e8718a;
+}
+
+.badge-bottom {
+  bottom: 40px;
+  left: -40px;
+}
+
+/* ================================================================
+   SECTION HEADER — dipakai semua section
+   ================================================================ */
+.section-header {
+  margin-top: 20px;
+  margin-bottom: 48px;
+}
+
+.section-tag {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #e8718a;
+  margin-bottom: 4px;
+  display: block;
+}
+
+.section-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 40px;
+  font-weight: 1000;
+  color: #1a1919d1;
+  margin-bottom: 0;
+}
+
+/* ================================================================
+   ABOUT ME SECTION
+   ================================================================ */
+.about-section {
+  background-color: #ffffff;
+  min-height: 100vh;
+}
+
+.about-section .title-line {
+  width: 195px;
+  height: 2.5px;
+  background-color: #e8718a;
+  border-radius: 3px;
+}
+
+/* Experience card — Bootstrap col-lg-5 yang mengatur lebarnya */
+.about-exp {
+  padding: 20px;
+  background-color: #faf8f5;
+  border: 1.5px solid rgba(220, 210, 190, 0.491);
+  border-radius: 16px;
+  box-shadow: 0 1px 25px rgba(26, 26, 26, 0.08);
+}
+
+.sub-heading {
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  font-weight: 1000;
+  color: #1a1919d1;
+  position: relative;
+  display: inline-block;
+  transition: 0.3s ease;
+  margin-bottom: 16px;
+}
+
+.sub-heading:hover {
+  text-shadow: 0 0 5px #ff97aec1, 0 0 15px #ffe5eb;
+}
+
+.exp-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.exp-card {
+  padding: 10px 0 5px 5px;
+  border-left: 3px solid #ece8e1;
+  transition: border-color 0.25s ease;
+}
+
+.exp-card:hover {
+  border-left-color: #e8718a;
+}
+
+.exp-tahun {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #e8718a;
+  display: block;
+  margin: 2px;
+}
+
+.exp-role {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 2px 0 1px;
+}
+
+.exp-tempat {
+  font-size: 16px;
+  color: #999999;
+}
+
+.about-desc {
+  font-size: 18px;
+  color: #555555;
+  line-height: 1.8;
+  font-weight: 300;
+  margin-bottom: 40px;
+  text-align: justify;
+}
+
+/* Skill — layout pakai Bootstrap row col-md-6, styling di sini */
+.skill-header {
+  margin-bottom: 5px;
+}
+
+.skill-name {
+  font-size: 15px;
+  font-weight: 600;
+  color: #444444;
+  cursor: default;
+}
+
+.skill-pct {
+  font-size: 11px;
+  font-weight: 700;
+  color: #e8718a;
+}
+
+/* Override Bootstrap progress untuk menyesuaikan desain */
+.progress {
+  height: 14px;
+  background-color: #f0ebe3;
+  border-radius: 10px;
+}
+
+.progress-bar {
+  background-color: #e8718a;
+  border-radius: 10px;
+  transition: width 0.6s ease;
+}
+
+/* Tools — layout pakai Bootstrap d-flex flex-wrap gap-2 */
+.tool-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background-color: #ffffff;
+  border: 1px solid #ece8e1;
+  padding: 6px 12px;
+  border-radius: 30px;
+  transition: border-color 0.25s ease, color 0.25s ease;
+}
+
+.tool-item:hover {
+  border-color: #e8c5cb;
+  color: #e8718a;
+}
+
+.tool-icon {
+  font-size: 13px;
+  color: #e8718a;
+}
+
+.tool-name {
+  font-size: 12px;
+  font-weight: 500;
+  color: #555555;
+}
+
+/* ================================================================
+   CERTIFICATES SECTION
+   ================================================================ */
+.cert-section {
+  background-color: #faf8f5;
+  min-height: 100vh;
+  padding-top: 48px;
+}
+
+.cert-section .title-line {
+  width: 240px;
+  height: 2.5px;
+  background-color: #e8718a;
+  border-radius: 3px;
+}
+
+.section-sub {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #555555;
+  line-height: 1.8;
+  font-weight: 300;
+}
+
+/* Bootstrap card override */
+.certificate-card {
+  background-color: #faf8f5;
+  border: 1px solid #ece8e1;
+  border-radius: 14px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.certificate-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(232, 113, 138, 0.1);
+  border-color: #e8c5cb;
+}
+
+.cert-img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+}
+
+.cert-issuer-label {
+  font-size: 11px;
+  font-weight: 1000;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #e8718a;
+  margin-bottom: 4px;
+}
+
+.certificate-card .card-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  color: #1a1a1a;
+  margin-bottom: 6px;
+}
+
+.certificate-card .card-text {
+  font-size: 14px;
+  color: #888888;
+  line-height: 1.65;
+}
+
+.cert-tag {
+  font-size: 11px;
+  font-weight: 500;
+  color: #e8718a;
+  background-color: #fff0f2;
+  border: 1px solid #f5c5cf;
+  padding: 3px 10px;
+  border-radius: 20px;
+}
+
+/* ================================================================
+   CONTACT SECTION
+   ================================================================ */
+.contact-section {
+  background-color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.contact-heading {
+  font-family: 'Poppins', sans-serif;
+  font-size: 40px;
+  font-weight: 1000;
+  line-height: 1.15;
+  color: #1a1919d1;
+  margin-top: 8px;
+}
+
+.contact-sub {
+  font-size: 18px;
+  color: #666666;
+  line-height: 1.8;
+  font-weight: 300;
+  max-width: 440px;
+  text-align: justify;
+  margin-top: 12px;
+}
+
+/* Social Buttons — layout pakai Bootstrap d-flex flex-wrap gap-3 */
+.social-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #555555;
+  background-color: #ffffff;
+  border: 1px solid #ece8e1;
+  padding: 10px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: color 0.25s ease, border-color 0.25s ease, background-color 0.25s ease;
+}
+
+.social-btn:hover {
+  color: #e8718a;
+  border-color: #e8c5cb;
+  background-color: #fff0f2;
+}
+
+.contact-card {
+  background-color: #ffffff;
+  border: 1px solid #ece8e1;
+  border-radius: 20px;
+  padding: 32px;
+}
+
+.contact-card-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 20px;
+}
+
+.contact-info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contact-info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.contact-info-icon {
+  width: 36px;
+  height: 36px;
+  background-color: #fff0f2;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.contact-info-icon i {
+  color: #e8718a;
+  font-size: 15px;
+}
+
+.contact-info-label {
+  display: block;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #aaaaaa;
+}
+
+.contact-info-value {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  color: #1a1a1a;
+}
+
+.availability-badge {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  border-radius: 30px;
+  padding: 10px 16px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #15803d;
+}
+
+.avail-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #22c55e;
+  border-radius: 50%;
+  flex-shrink: 0;
+  animation: kedip 2s infinite;
+}
+
+@keyframes kedip {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.3; }
+}
+
+/* ================================================================
+   FOOTER
+   ================================================================ */
+footer {
+  background-color: #ffffff;
+  border-top: 1px solid #ece8e1;
+  padding: 5px 20px;
+}
+
+.footer-copy {
+  font-size: 13px;
+  color: #aaaaaa;
+  margin: 0;
+}
+
+.footer-top {
+  font-size: 13px;
+  font-weight: 500;
+  color: #888888;
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+.footer-top:hover {
+  color: #e8718a;
+}
+
+/* ================================================================
+   RESPONSIVE — hanya untuk hal yang tidak bisa ditangani Bootstrap
+   Breakpoint utama (lg/md) sudah ditangani oleh col-lg-* di HTML
+   ================================================================ */
+
+/* Tablet ke bawah: ukuran font h1 lebih kecil */
+@media (max-width: 991.98px) {
+  h1 { font-size: 48px; }
+
+  /* Float badge disembunyikan di layar kecil (tidak ada di Bootstrap utilities) */
+  .float-badge { display: none; }
+
+  .contact-heading { font-size: 34px; }
+  .contact-sub { max-width: 100%; }
+}
+
+/* Desktop medium: profile box lebih kecil */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  h1 { font-size: 52px; }
+
+  .profile-box {
+    width: 340px;
+    height: 340px;
+  }
+}
+
+/* Mobile kecil: penyesuaian ukuran elemen yang tidak bisa Bootstrap */
+@media (max-width: 575.98px) {
+  h1 { font-size: 30px; }
+
+  /* Tombol full width di mobile — Bootstrap d-flex sudah wrap, ini tambahan */
+  .explore-btn,
+  .contact-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .profile-box {
+    width: 180px;
+    height: 180px;
+  }
+
+  .section-title { font-size: 26px; }
+  .contact-heading { font-size: 24px; }
+  .contact-card { padding: 20px 16px; }
+
+  .availability-badge {
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+
+  .cert-section .title-line {
+    width: 140px;
+  }
+
+  .exp-role { font-size: 14px; }
+  .tool-name { font-size: 11px; }
+}
