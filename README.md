@@ -1,3 +1,9 @@
+**Nama**: Nayla camelia indraswari
+
+**NIM**: 2409116009
+
+**Kelas**: A
+
 # MiniProject2-Pemrograman-Berbasis-Web-Portofolio
 
 Project ini merupakan website portofolio yang dibuat menggunakan HTML, CSS, Bootstrap 5, Vue JS, dan PHP dengan koneksi database MySQL. Website ini menampilkan informasi pribadi, pengalaman, skill, sertifikat, dan media sosial secara interaktif dan responsif.
@@ -23,7 +29,7 @@ Project ini merupakan website portofolio yang dibuat menggunakan HTML, CSS, Boot
 | **CSS** | Mengatur tampilan visual seperti warna, layout tambahan, animasi hover, dan efek transisi |
 | **Bootstrap 5** | Layout responsif menggunakan grid system, serta komponen siap pakai seperti navbar, card, progress bar, dan utility class |
 | **Bootstrap Icons** | Menampilkan ikon pada navbar, tools, social media, dan badge profil |
-| **Vue JS ** | Menampilkan data secara dinamis seperti nama, skill, sertifikat, dan social media tanpa menulis ulang HTML secara manual |
+| **Vue JS** | Menampilkan data secara dinamis seperti nama, skill, sertifikat, dan social media tanpa menulis ulang HTML secara manual |
 | **Google Fonts (Poppins)** | Font utama untuk tampilan bersih dan konsisten di seluruh halaman |
 | **PHP** | Sebagai backend API yang mengambil data dari database dan mengembalikannya dalam format JSON |
 | **MySQL** | Menyimpan semua data portofolio seperti profil, skill, pengalaman, sertifikat, dan social media |
@@ -148,44 +154,46 @@ Semua request data dilakukan melalui satu file `api.php` dengan parameter `?sect
 ---
 
 ## 📄 Penjelasan Kode
+ 
 
 <details>
-<summary>Navbar Section</summary>
-
-Navbar terdiri dari empat link yang terhubung ke setiap section pada website: Home, About, Certificates, dan Contact.
+   <summary>Navbar Section</summary>
+  
+Navbar terdiri dari tiga button yang terhubung dengan setiap section pada website, yakni button Home, About me, Certificate dan Contact. 
 
 ### HTML
 
 Section ini menerapkan komponen Navbar Bootstrap yang dilengkapi dengan:
-1. **Utility spacing** (`ms-auto`) untuk mengatur posisi dan jarak antar elemen
-2. **Collapse system** (`navbar-toggler`, `collapse`, `data-bs-toggle`) untuk hamburger menu di layar kecil
-3. **Breakpoint** `navbar-expand-lg` agar navbar responsif di berbagai device
+1. **Utility spacing** (`ms-auto`) untuk mengatur posisi dan jarak antar elemen agar lebih rapi.
+2. **Collapse system** (`navbar-toggler`, `collapse`, `data-bs-toggle`) untuk menyembunyikan menu dalam bentuk hamburger saat layar berukuran kecil.
+3. **Breakpoint** `navbar-expand-lg` untuk memastikan navbar berubah secara otomatis berdasarkan ukuran layar, sehingga tetap responsif di berbagai device.`
 
 ### CSS
 
-CSS mengatur warna, ukuran font, padding, efek blur backdrop, serta efek hover pada link navigasi.
+
+CSS mengatur warna, ukuran font, padding, efek blur, serta efek hover pada button.
 
 </details>
 
 ---
 
 <details>
-<summary>Hero Section</summary>
+   <summary>Hero Section</summary>
 
-Hero Section menampilkan greeting, nama, tagline, deskripsi singkat, foto profil, dan dua tombol navigasi.
+Hero Section terdiri dari deskripsi singkat diri, greetings, foto porfil dan button koneksi.
 
 ### HTML
 
-Section ini menerapkan:
-1. **Grid system & breakpoint** `col-12 col-lg-7` untuk layout dua kolom yang responsif
-2. **Spacing utilities** `mt-4` untuk margin top
-3. **Flex utilities** `d-flex` untuk menyusun tombol secara horizontal
-4. **Interpolasi Vue JS** `{{ profile.name }}`, `{{ profile.tagline }}` untuk menampilkan data dari database
-5. **Text alignment** `text-center text-lg-end` untuk tata letak teks yang responsif
+Section ini menerapkan komponen Bootstrap dan Interpolasi Vue Js sebagai berikut:
+1. **Grid system & breakpoint** `col-12 col-lg-7` untuk membagi layout menjadi beberapa kolom dengan sistem 12 grid dan memastikan agar tampilan website tetap responsive di berbagai layar.
+2. **Spacing utilities** `mt-4` untuk memberi spacing margin top.
+3. **Flex utilities**`d-flex` untuk mengaktifkan display flexbox pada button sehingga dapat disusun secara horizontal.
+4. **Interpolasi Vue Js**, `{{ tagline }}`, `{{ description }}`, untuk menampilkan data yang  disimpan pada vue.
+5. **Text alignment** `text-center text-lg-end` untuk mengatur tata letak teks secara responsif.
 
 ### CSS
 
-CSS mengatur ukuran font h1, warna tombol, efek hover, serta ukuran dan bentuk foto profil (lingkaran).
+CSS mengatur warna, ukuran font, padding, efek blur, serta efek hover pada button.
 
 </details>
 
@@ -194,19 +202,19 @@ CSS mengatur ukuran font h1, warna tombol, efek hover, serta ukuran dan bentuk f
 <details>
 <summary>About Me Section</summary>
 
-About Me terbagi dua — kiri berisi pengalaman, kanan berisi deskripsi, progress bar skill, dan daftar tools.
+About Me terbagi menjadi dua bagian, section kiri berisi pengalaman, section kanan berisi deskripsi skill, progress bar skill, dan daftar tools yang dikuasai. Section ini telah menerapkan bootstrap dan interpolasi Vue Js.
 
 ### HTML
 
-Section ini menerapkan:
-1. **Grid system** `col-12 col-lg-5` dan `col-12 col-lg-7` untuk layout dua kolom responsif
-2. **Progress bar** `<div class="progress-bar">` dari komponen Bootstrap
-3. **Flex utility** `d-flex flex-wrap gap-2` untuk menampilkan tools dalam satu baris
-4. **Vue JS `v-for`** `v-for="skill in skills"` dan `:style="{ width: skill.level + '%' }"` untuk render daftar skill dari database secara dinamis
+Section ini menerapkan komponen Bootstrap dan Vue JS sebagai berikut:
+1. **Grid system** `col-12 col-lg-5`  dan `col-12 col-lg-7`  uigunakan untuk membagi tampilan menjadi dua bagian dan ketika di layar kecil otomatis menjadi satu kolom sehingga web bersifat responsift.
+2. **Progress bar** menggunakan `<div class="progress-bar">` untuk memanggil komponen progress bar bawaan Bootstrap.
+3. **Flex utility** `d-flex flex-wrap gap-2` untuk menampilkan tools dalam satu baris dengan gap yang sama.
+4. **Interpolasi Vue JS `v-for`**  `v-for="skill in skills"` dan `:style="{ width: skill.level + '%' }"` untuk menampilkan daftar skill dari data yang sudah disimpan, jadi tidak perlu menulis satu per satu secara manual.
 
 ### CSS
 
-CSS mengatur background, warna font, padding, efek hover pada experience card, serta warna progress bar.
+CSS mengatur background, warna & kuran font, padding, efek blur pada experience section serta warna progress bar.
 
 </details>
 
@@ -215,18 +223,18 @@ CSS mengatur background, warna font, padding, efek hover pada experience card, s
 <details>
 <summary>Certificates Section</summary>
 
-Menampilkan daftar sertifikat dalam layout grid kartu. Setiap kartu memiliki gambar, instansi penerbit, judul, deskripsi, dan tag skill.
+Section Certificates menampilkan daftar sertifikat dalam layout grid kartu. Setiap kartu memiliki gambar sertifikat, instansi penerbit, judul, deskripsi, dan tag skill yang dipelajari.
 
 ### HTML
 
-Section ini menerapkan:
-1. **Grid system** `col-12 col-md-6 col-lg-4` untuk layout kartu yang responsif
-2. **Card component** Bootstrap: `card`, `card-img-top`, `card-body`, `card-title`, `card-text`
-3. **Vue JS `v-for` nested** — `v-for="cert in certificates"` untuk render kartu dari database, dan `v-for="tag in cert.tags"` untuk render tag di dalam setiap kartu
+Section ini menerapkan komponen Bootstrap dan Vue JS sebagai berikut:
+1. **Grid system** `col-12 col-md-6 col-lg-4` untuk menampilkan card yang secara otomatis menyesuaikan ukurannya dengan layar device.
+2. **Card component** `card`, `card-img-top`, `card-body`, `card-title`, `card-text` merupakan komponen bootsrtrap yang akan mengisi tampilan sertifikat.
+3. **Interpolasi Vue JS `v-for` nested** — `v-for="cert in certificates"` untuk menampilkan sertifikat dari data yang telah tersimpan di vue.
 
 ### CSS
 
-CSS mengatur tampilan kartu, ukuran gambar, efek `translateY` saat hover, serta styling tag pill.
+CSS mengatur tampilan kartu mulai dari font pada deksirpsi informasi sertifikat, ukuran gambar yang ditampilkan hingga efek blur ketika dilakukan hover pada kartu.
 
 </details>
 
@@ -235,19 +243,19 @@ CSS mengatur tampilan kartu, ukuran gambar, efek `translateY` saat hover, serta 
 <details>
 <summary>Contact Section</summary>
 
-Contact terbagi dua — kiri berisi tombol social media, kanan berisi quick info (email, lokasi, kampus).
+Section Contact terbagi menjadi dua kolom utama, section kiri berisi informasi sosial media yang dapat dihubungi, sedangkan section kanan berisi data diri singkat.
 
 ### HTML
 
-Section ini menerapkan:
-1. **Grid system** `col-12 col-lg-6` untuk dua kolom dengan ukuran sama
-2. **Flex utility** `d-flex flex-wrap gap-3` untuk menyusun tombol social media secara horizontal
-3. **Vue JS `:href` binding** `:href="soc.link"` untuk URL social media dari database
-4. **Vue JS `:class` binding** `:class="soc.icon"` untuk menampilkan Bootstrap Icon sesuai data
+Section ini menerapkan komponen Bootstrap dan Vue JS sebagai berikut:
+1. **Grid system** `col-12 col-lg-6` untuk membagi tampilan menjadi dua kolom dengan ukuran yang sama.
+2. **Flex utility** `d-flex flex-wrap gap-3` untuk menyusun tombol sosial media secara horizontal dan otomatis ke baris baru jika tidak muat.
+3. **Spacing utility** `mt-4` untuk memberi jarak antara elemen sehingga tidak perlu menambah CSS manual.
+4. **Vue JS `:class` binding** `:class="soc.icon"` dan `:class="info.icon"` untuk menampilkan daftar social media, link, serta bootstrap icon yang sudah tersimpan di vue.
 
 ### CSS
 
-CSS mengatur warna section, ukuran font, animasi titik berkedip pada availability badge, dan efek hover pada tombol social media.
+CSS mengatur warna section, ukuran dan warna font, serta  menambahkan efek visual seperti animasi titik yang berkedip (pada availability) dan perubahan warna tombol saat dihover.
 
 </details>
 
@@ -256,21 +264,23 @@ CSS mengatur warna section, ukuran font, animasi titik berkedip pada availabilit
 <details>
 <summary>Footer</summary>
 
-Footer menampilkan teks copyright di kiri dan tautan *Back to top* di kanan.
+Footer menampilkan teks copyright di kiri dan tautan *Back to top* di kanan yang, ketika diklik, akan membawa pengguna ke halaman awal website.
 
 ### HTML
 
-1. **Flex utility** `d-flex justify-content-between` untuk menempatkan copyright kiri dan link kanan
-2. **Spacing utility** `py-2` untuk padding vertikal dan `mb-0` untuk menghilangkan margin default
+
+Footer menggunakan Bootstrap utility classes sepenuhnya untuk layout:
+1. **Flex utility** `d-flex justify-content-between` untuk menempatkan copyright di kiri dan link di kanan secara otomatis dalam satu baris.
+2. **Spacing utility** `py-2` untuk padding vertikal tipis dan `mb-0` untuk menghilangkan margin bawah default
 
 ### CSS
 
-CSS mengatur ukuran font, warna, garis tipis di atas footer, dan efek hover pada link *Back to top*.
+
+CSS mengatur ukuran dan warna font, menambah garis tipis diatas footer untuk memberikan batasan dengan section sebelumnya serta mengatur perubahan elemen ketika melakukan hover pada *Back to top*.
 
 </details>
 
 ---
-
 ## 🐘 Penjelasan Kode PHP
 
 <details>
